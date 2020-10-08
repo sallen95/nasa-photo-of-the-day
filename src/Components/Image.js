@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledNasaImage = styled.div`
+    text-align: center;
     img {
         width:50%;
 
@@ -11,10 +12,11 @@ const StyledNasaImage = styled.div`
     }
 `
 function Image(props) {
-    const { source } = props
+    const { title, source } = props
 
     return (
         <StyledNasaImage>
+            <h2>{title}</h2>
             <img alt='picture of the day from Nasa' src={source}/>
         </StyledNasaImage>
     )
